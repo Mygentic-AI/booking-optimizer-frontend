@@ -1,0 +1,234 @@
+/* Voice Agent Reskin - Matches Booking App Theme */
+
+/* Override PlaygroundTile styles */
+.flex.flex-col.border.rounded-sm.border-gray-800 {
+  border-color: var(--light-gray-border) !important;
+  border-radius: var(--border-radius) !important;
+  background: white !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+/* Override tile headers */
+.flex.items-center.justify-center.text-xs.uppercase.py-2.border-b.border-b-gray-800 {
+  background: linear-gradient(135deg, var(--light-gray) 0%, var(--off-white) 100%) !important;
+  border-color: var(--light-gray-border) !important;
+  border-left: 4px solid var(--booking-primary) !important;
+  color: var(--dark-blue-gray) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Override tabbed tile styles */
+.flex.items-center.justify-start.text-xs.uppercase.border-b.border-b-gray-800 {
+  background: linear-gradient(135deg, var(--light-gray) 0%, var(--off-white) 100%) !important;
+  border-color: var(--light-gray-border) !important;
+}
+
+/* Tab buttons */
+button.px-4.py-2.rounded-sm.hover\:bg-gray-800.hover\:text-gray-300.border-r.border-r-gray-800 {
+  border-color: var(--light-gray-border) !important;
+  color: var(--secondary-text) !important;
+  transition: all 0.3s ease !important;
+}
+
+button.px-4.py-2.rounded-sm.hover\:bg-gray-800.hover\:text-gray-300.border-r.border-r-gray-800:hover {
+  background: var(--light-primary) !important;
+  color: var(--booking-primary) !important;
+}
+
+/* Active tab */
+button.px-4.py-2.rounded-sm.bg-gray-900.text-gray-300 {
+  background: white !important;
+  color: var(--booking-primary) !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid var(--booking-primary) !important;
+}
+
+/* Override main background */
+body,
+.bg-gray-950,
+.bg-black {
+  background-color: var(--light-gray) !important;
+}
+
+/* Override text colors */
+.text-gray-500 {
+  color: var(--secondary-text) !important;
+}
+
+.text-gray-300 {
+  color: var(--primary-text) !important;
+}
+
+.text-white {
+  color: var(--primary-text) !important;
+}
+
+/* Override header styles - style it to match our theme */
+.flex.gap-4.pt-4.justify-between.items-center.shrink-0 {
+  background: white !important;
+  padding: 1rem 2rem !important;
+  margin: 1rem !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+/* Connect/Disconnect button override */
+button[class*="bg-"][class*="500"] {
+  background: linear-gradient(135deg, var(--booking-primary) 0%, var(--booking-primary-dark) 100%) !important;
+  border: none !important;
+  color: white !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: var(--border-radius-small) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+button[class*="bg-"][class*="500"]:hover {
+  background: linear-gradient(135deg, var(--booking-primary-dark) 0%, var(--booking-primary) 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(217, 30, 138, 0.3) !important;
+}
+
+/* Audio visualizer override */
+.lk-audio-visualizer {
+  background: var(--light-primary) !important;
+  border: 2px solid var(--booking-primary) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 1rem !important;
+}
+
+/* Configuration rows */
+.flex.flex-row.items-center.justify-between.w-full.text-xs {
+  padding: 0.75rem !important;
+  border-bottom: 1px solid var(--light-gray-border) !important;
+}
+
+.flex.flex-row.items-center.justify-between.w-full.text-xs:hover {
+  background: var(--light-primary) !important;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="number"],
+select {
+  background: white !important;
+  border: 1px solid var(--light-gray-border) !important;
+  border-radius: var(--border-radius-small) !important;
+  color: var(--primary-text) !important;
+  padding: 0.5rem !important;
+  transition: border-color 0.3s ease !important;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none !important;
+  border-color: var(--booking-primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(217, 30, 138, 0.25) !important;
+}
+
+/* Transcription messages */
+.flex.flex-row.gap-2.items-start {
+  padding: 0.75rem !important;
+  border-radius: var(--border-radius-small) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* User messages */
+.flex.flex-row.gap-2.items-start.justify-end {
+  background: var(--light-primary) !important;
+}
+
+/* Assistant messages */
+.flex.flex-row.gap-2.items-start:not(.justify-end) {
+  background: #f3f4f6 !important;
+}
+
+/* Override scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--booking-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--booking-primary-dark);
+}
+
+/* Color picker override */
+.flex.flex-row.gap-1.items-center.justify-center {
+  background: white !important;
+  padding: 0.5rem !important;
+  border-radius: var(--border-radius-small) !important;
+}
+
+/* Device selector dropdown */
+.relative button {
+  background: white !important;
+  border: 1px solid var(--light-gray-border) !important;
+  color: var(--primary-text) !important;
+}
+
+.relative button:hover {
+  border-color: var(--booking-primary) !important;
+}
+
+/* Override any remaining dark backgrounds */
+[class*="bg-gray-9"],
+[class*="bg-gray-8"],
+[class*="bg-black"] {
+  background: white !important;
+}
+
+/* Loading spinner */
+.animate-spin {
+  color: var(--booking-primary) !important;
+}
+
+/* Status indicators */
+.bg-green-500 {
+  background: var(--success-green) !important;
+}
+
+.bg-red-500 {
+  background: #dc3545 !important;
+}
+
+/* Toggle switches */
+input[type="checkbox"] {
+  accent-color: var(--booking-primary) !important;
+}
+
+/* Ensure proper contrast for all text */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-blue-gray) !important;
+}
+
+/* Fix any icon colors */
+svg {
+  color: currentColor;
+}
+
+/* Chat bubbles refinement */
+.rounded-lg {
+  border-radius: var(--border-radius) !important;
+}
+
+/* Connection status badge */
+.text-xs.font-mono {
+  background: var(--light-primary) !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: var(--border-radius-small) !important;
+  border: 1px solid var(--booking-primary) !important;
+  color: var(--booking-primary) !important;
+  font-weight: 600 !important;
+}

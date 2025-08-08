@@ -1,0 +1,158 @@
+{
+  "clients": [
+    {
+      "id": "client_1",
+      "name": "Mr. Ahmed Al-Rashid",
+      "phone": "+971501234567",
+      "email": "ahmed.alrashid@gmail.com",
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": "client_2",
+      "name": "Mrs. Fatima Al-Zahra",
+      "phone": "+971502345678",
+      "email": "fatima.alzahra@hotmail.com",
+      "createdAt": "2024-01-16T10:00:00Z"
+    },
+    {
+      "id": "client_3",
+      "name": "Mr. Rajesh Patel",
+      "phone": "+971503456789",
+      "email": "rajesh.patel@gmail.com",
+      "createdAt": "2024-01-17T10:00:00Z"
+    },
+    {
+      "id": "client_4",
+      "name": "Ms. Yuki Tanaka",
+      "phone": "+971504567890",
+      "email": "yuki.tanaka@example.ae",
+      "createdAt": "2024-01-18T10:00:00Z"
+    },
+    {
+      "id": "client_5",
+      "name": "Mr. Mehmet Özkan",
+      "phone": "+971505678901",
+      "email": "mehmet.ozkan@gmail.com",
+      "createdAt": "2024-01-19T10:00:00Z"
+    },
+    {
+      "id": "client_6",
+      "name": "Ms. Jennifer MacKenzie",
+      "phone": "+971506789012",
+      "email": "jennifer.mackenzie@outlook.com",
+      "createdAt": "2024-01-20T10:00:00Z"
+    },
+    {
+      "id": "client_7",
+      "name": "Mr. Dmitri Volkov",
+      "phone": "+971507890123",
+      "email": "dmitri.volkov@mail.ru",
+      "createdAt": "2024-01-21T10:00:00Z"
+    }
+  ],
+  "staff": [
+    {
+      "id": "staff_1",
+      "name": "Dr. Khalid Al-Mansoori",
+      "title": "General Practitioner",
+      "specialty": "Family Medicine",
+      "createdAt": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "staff_2",
+      "name": "Dr. Aisha Bin Rashid",
+      "title": "Cardiologist",
+      "specialty": "Cardiology",
+      "createdAt": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "staff_3",
+      "name": "Dr. Priya Sharma",
+      "title": "Dermatologist",
+      "specialty": "Dermatology",
+      "createdAt": "2024-01-01T10:00:00Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "booking_1",
+      "clientId": "client_1",
+      "staffId": "staff_1",
+      "appointmentDate": "2025-07-17",
+      "appointmentTime": "10:00 AM",
+      "status": "confirmed",
+      "notes": "Regular checkup",
+      "createdAt": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "booking_2",
+      "clientId": "client_2",
+      "staffId": "staff_2",
+      "appointmentDate": "2025-07-17",
+      "appointmentTime": "2:30 PM",
+      "status": "pending",
+      "notes": "Follow-up appointment",
+      "createdAt": "2024-01-16T11:00:00Z"
+    },
+    {
+      "id": "booking_3",
+      "clientId": "client_3",
+      "staffId": "staff_3",
+      "appointmentDate": "2025-07-18",
+      "appointmentTime": "11:30 AM",
+      "status": "pending",
+      "notes": "Skin consultation",
+      "createdAt": "2024-01-17T14:00:00Z"
+    },
+    {
+      "id": "booking_4",
+      "clientId": "client_4",
+      "staffId": "staff_1",
+      "appointmentDate": "2025-07-17",
+      "appointmentTime": "3:30 PM",
+      "status": "confirmed",
+      "notes": "Annual health screening",
+      "createdAt": "2024-01-18T09:00:00Z"
+    },
+    {
+      "id": "booking_5",
+      "clientId": "client_5",
+      "staffId": "staff_2",
+      "appointmentDate": "2025-07-18",
+      "appointmentTime": "9:00 AM",
+      "status": "pending",
+      "notes": "Cardiology consultation",
+      "createdAt": "2024-01-19T10:00:00Z"
+    },
+    {
+      "id": "booking_6",
+      "clientId": "client_6",
+      "staffId": "staff_3",
+      "appointmentDate": "2025-07-18",
+      "appointmentTime": "2:00 PM",
+      "status": "confirmed",
+      "notes": "Skin allergy treatment",
+      "createdAt": "2024-01-20T11:00:00Z"
+    },
+    {
+      "id": "booking_7",
+      "clientId": "client_7",
+      "staffId": "staff_1",
+      "appointmentDate": "2025-07-19",
+      "appointmentTime": "10:30 AM",
+      "status": "pending",
+      "notes": "General checkup",
+      "createdAt": "2024-01-21T12:00:00Z"
+    },
+    {
+      "clientId": "client_2",
+      "staffId": "staff_3",
+      "appointmentDate": "2025-07-22",
+      "appointmentTime": "2:00 PM",
+      "status": "pending",
+      "notes": "Persistent skin allergies that are producing a rash on the backs of her arms and back of her knees",
+      "id": "booking_1753175568911_ior2a3l40",
+      "createdAt": "2025-07-22T09:12:48.911Z"
+    }
+  ]
+}
