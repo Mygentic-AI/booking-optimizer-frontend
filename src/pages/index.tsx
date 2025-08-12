@@ -132,7 +132,7 @@ export default function HomeInner() {
                   Staff
                 </a>
                 <a href="/" className="booking-nav-link active">
-                  Doctor Visit
+                  Confirm Appointment
                 </a>
               </div>
             </div>

@@ -655,10 +655,10 @@ export default function Playground({
         </div>
       </div>
       
-      {/* Right pane - Diagnosis Chat */}
+      {/* Right pane - Appointment Form */}
       <div className="flex flex-col w-1/3 bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800">
         <div className="h-14 flex items-center justify-between px-4 border-b border-gray-800">
-          <h2 className="text-sm uppercase tracking-wider text-gray-500">Diagnosis Chat</h2>
+          <h2 className="text-sm uppercase tracking-wider text-gray-500">Appointment Details</h2>
           <button
             onClick={() => setShowSettings(!showSettings)}
             className="p-1 hover:bg-gray-800 rounded transition-colors"
@@ -669,12 +669,148 @@ export default function Playground({
             </svg>
           </button>
         </div>
-        <div className="flex-1 overflow-y-auto">
-          <ChatTileCompact
-            messages={diagnosisMessages}
-            accentColor={config.settings.theme_color}
-            onSend={sendDiagnosisMessage}
-          />
+        <div className="flex-1 overflow-y-auto p-3">
+          <form className="space-y-2">
+            <div>
+              <label className="block text-xs font-medium text-gray-400 mb-0.5">Patient Name</label>
+              <input 
+                type="text" 
+                className="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-1 focus:ring-pink-500"
+                placeholder="Enter patient name"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs font-medium text-gray-400 mb-0.5">Phone Number</label>
+              <input 
+                type="tel" 
+                className="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-1 focus:ring-pink-500"
+                placeholder="+971 XX XXX XXXX"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs font-medium text-gray-400 mb-0.5">Appointment Date</label>
+              <input 
+                type="datetime-local" 
+                className="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-1 focus:ring-pink-500"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs font-medium text-gray-400 mb-0.5">Doctor</label>
+              <select className="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-1 focus:ring-pink-500">
+                <option value="">Select a doctor</option>
+                <option value="Dr. Sarah">Dr. Sarah</option>
+                <option value="Dr. Ahmed">Dr. Ahmed</option>
+                <option value="Dr. Fatima">Dr. Fatima</option>
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-xs font-medium text-gray-400 mb-0.5">Service Type</label>
+              <select className="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-1 focus:ring-pink-500">
+                <option value="">Select service</option>
+                <option value="consultation">Consultation</option>
+                <option value="follow-up">Follow-up</option>
+                <option value="emergency">Emergency</option>
+                <option value="routine-checkup">Routine Checkup</option>
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-xs font-medium text-gray-400 mb-0.5">Location</label>
+              <input 
+                type="text" 
+                className="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-1 focus:ring-pink-500"
+                placeholder="Downtown Medical Center"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs font-medium text-gray-400 mb-0.5">Language</label>
+              <select className="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-1 focus:ring-pink-500">
+                <option value="en-US">English (US)</option>
+                <option value="ar-XA" selected>Arabic</option>
+                <option value="zh-CN">Chinese (Simplified)</option>
+                <option value="zh-TW">Chinese (Traditional)</option>
+                <option value="da-DK">Danish</option>
+                <option value="nl-NL">Dutch</option>
+                <option value="fr-FR">French</option>
+                <option value="de-DE">German</option>
+                <option value="hi-IN">Hindi</option>
+                <option value="id-ID">Indonesian</option>
+                <option value="it-IT">Italian</option>
+                <option value="ja-JP">Japanese</option>
+                <option value="ko-KR">Korean</option>
+                <option value="no-NO">Norwegian</option>
+                <option value="pl-PL">Polish</option>
+                <option value="pt-BR">Portuguese (Brazil)</option>
+                <option value="pt-PT">Portuguese (Portugal)</option>
+                <option value="ru-RU">Russian</option>
+                <option value="es-ES">Spanish (Spain)</option>
+                <option value="es-MX">Spanish (Mexico)</option>
+                <option value="sv-SE">Swedish</option>
+                <option value="th-TH">Thai</option>
+                <option value="tr-TR">Turkish</option>
+                <option value="uk-UA">Ukrainian</option>
+                <option value="vi-VN">Vietnamese</option>
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-xs font-medium text-gray-400 mb-0.5">Voice</label>
+              <select className="w-full px-2 py-1 text-sm bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-1 focus:ring-pink-500">
+                <optgroup label="Female Voices">
+                  <option value="Kore" selected>Kore - Warm & friendly</option>
+                  <option value="Achernar">Achernar - Bright & energetic</option>
+                  <option value="Aoede">Aoede - Soft & gentle</option>
+                  <option value="Pulcherrima">Pulcherrima - Professional</option>
+                  <option value="Vindemiatrix">Vindemiatrix - Formal</option>
+                  <option value="Zephyr">Zephyr - Light & welcoming</option>
+                  <option value="Gacrux">Gacrux - Authoritative</option>
+                </optgroup>
+                <optgroup label="Male Voices">
+                  <option value="Achird">Achird - Calm & neutral</option>
+                  <option value="Algenib">Algenib - Deep & formal</option>
+                  <option value="Alnilam">Alnilam - Conversational</option>
+                  <option value="Fenrir">Fenrir - Dynamic</option>
+                  <option value="Puck">Puck - Casual (default)</option>
+                  <option value="Orus">Orus - Customer service</option>
+                  <option value="Rasalgethi">Rasalgethi - Storytelling</option>
+                </optgroup>
+              </select>
+            </div>
+            
+            <div className="pt-2 flex gap-2">
+              <button
+                type="button"
+                className="flex-1 py-1.5 px-3 text-sm font-medium rounded transition-colors duration-200"
+                style={{ 
+                  backgroundColor: 'rgb(55, 65, 81)', 
+                  color: 'white',
+                  border: '1px solid rgb(75, 85, 99)'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgb(75, 85, 99)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgb(55, 65, 81)'}
+              >
+                Demo Call
+              </button>
+              <button
+                type="button"
+                className="flex-1 py-1.5 px-3 text-sm font-medium rounded transition-colors duration-200"
+                style={{ 
+                  backgroundColor: 'rgb(55, 65, 81)', 
+                  color: 'white',
+                  border: '1px solid rgb(75, 85, 99)'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgb(75, 85, 99)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgb(55, 65, 81)'}
+              >
+                Call
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       

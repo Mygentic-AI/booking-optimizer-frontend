@@ -77,7 +77,7 @@ const LKLogo = () => (
   <div className="flex items-center gap-2">
     <span style={{ fontSize: '1.5rem' }}>🤖</span>
     <div className="font-bold text-lg" style={{ color: 'var(--booking-primary)' }}>
-      Doctor Visit
+      Confirm Appointment
     </div>
   </div>
 );
